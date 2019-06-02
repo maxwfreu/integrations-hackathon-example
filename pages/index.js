@@ -52,7 +52,6 @@ class Index extends React.Component {
               Raise a lot errors in sentry
             </button>
           </li>
-          DSN: {process.env.SENTRY_DSN}
         </ul>
       </div>
     )
