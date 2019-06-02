@@ -21,7 +21,12 @@ class Index extends React.Component {
 
   raiseErrorInUpdate = () => this.setState({ raiseErrorInUpdate: '1' })
   raiseErrorInRender = () => this.setState({ raiseErrorInRender: '1' })
-  raiseALotOfErrors = () => for(let i = 0; i < 10; i++) { Sentry.captureException(`Mock Error: ${(new Date().getTime())}`) })
+  raiseALotOfErrors = () => {
+    for(let i = 0; i < 10; i++) {
+      // const referr = new ReferenceError(`Mock Error: ${(new Date().getTime())}`)
+      Sentry.captureException(`Mock Error: ${(new Date().getTime())}`);
+    }
+  };
 
   render () {
     if (this.state.raiseErrorInRender) {
@@ -47,6 +52,7 @@ class Index extends React.Component {
               Raise a lot errors in sentry
             </button>
           </li>
+          DSN: {process.env.SENTRY_DSN}
         </ul>
       </div>
     )
