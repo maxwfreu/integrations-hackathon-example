@@ -3,7 +3,6 @@ import App, { Container } from 'next/app'
 import Head from 'next/head';
 import * as Sentry from '@sentry/browser';
 
-
 Sentry.init({ dsn: process.env.SENTRY_DSN });
 
 class MyApp extends App {

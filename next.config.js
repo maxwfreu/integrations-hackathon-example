@@ -1,5 +1,7 @@
-const withSourceMaps = require('@zeit/next-source-maps')();
 
 module.exports = {
-  target: 'serverless'
+  env: {
+    SENTRY_DSN: process.env.SENTRY_DSN,
+  },
+  target: 'serverless',
 };
