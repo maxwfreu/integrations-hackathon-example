@@ -52,6 +52,22 @@ class Index extends React.Component {
               Raise a lot errors in sentry
             </button>
           </li>
+          Available Env Vars:
+          <li>
+            process.env.SENTRY_DSN: {process.env.SENTRY_DSN}
+          </li>
+          <li>
+            process.env.SENTRY_AUTH_TOKEN: (private)
+          </li>
+          <li>
+            process.env.SENTRY_ORGANIZATION_SLUG: {process.env.SENTRY_ORGANIZATION_SLUG}
+          </li>
+          <li>
+            process.env.SENTRY_PROJECT_SLUG: {process.env.SENTRY_PROJECT_SLUG}
+          </li>
+          <li>
+            process.env.SENTRY_PROJECT_ID: {process.env.SENTRY_PROJECT_ID}
+          </li>
         </ul>
       </div>
     )
